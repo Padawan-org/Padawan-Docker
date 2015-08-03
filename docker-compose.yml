@@ -1,0 +1,29 @@
+db:
+  image: postgres
+  ports:
+    - "5432:5432"
+  environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASS=postgres
+
+box:
+  image: busybox
+  volumes:
+    - /box
+
+web: &default
+  build: .
+  command: ./script/start.sh
+  volumes:
+    - .:/usr/src/app
+  volumes_from:
+    - box
+  hostname: trakto
+  ports:
+    - "3000:3000"
+  links:
+    - db
+  environment:
+    - DB_USER=postgres
+    - DB_PASSWORD=postgres
+    - DB_HOST=db
