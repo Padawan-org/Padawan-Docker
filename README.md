@@ -9,6 +9,7 @@ You will need to download and install these tools.
 If you are on **Mac Os X** or **Windows** you will need to install
 * [Boot2docker](https://github.com/boot2docker/boot2docker#installation)
 * [VirtualBox VM](https://www.virtualbox.org/wiki/Downloads)
+
 But there's an all in one installers for boot2docker that comes with *VirtualBox*.
 
 # What you will have
@@ -28,19 +29,22 @@ It's simple, after instalation you will need to Change these files to match your
 
 # How to use
 If you are using *boot2docker* start it using these command bellow. [Learn more](https://github.com/boot2docker/boot2docker#how-to-use)
+
 		$ boot2docker init
 		$ boot2docker up
 
 To Build your containers, this will look at you docker-compose.yml.
+
 		$ docker-compose build
 
 Run your containers
+
 		$ docker-compose up
 
 Stop your containers
+
 		$ docker-compose stop
 
 # Inspiration and Thanks
 This project is inspired by [Padawan-Vagrant](https://github.com/brunodles/Padawan-Vagrant).  
 Thanks to [Mr Enderson](https://github.com/endersonmaia) for help me to start this project.
-
