@@ -21,7 +21,7 @@ web: &default
     - .:/usr/src/app
   volumes_from:
     - box
-  hostname: trakto
+  hostname: padawan
   ports:
     - "3000:3000"
   links:
