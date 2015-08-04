@@ -1,6 +1,19 @@
-FROM rails:4.2.3
+# change to your ruby version
+FROM ruby:2.2
 
-RUN apt-get update && apt-get install -y lsb
+# install nodejs
+RUN apt-get update && apt-get install -y nodejs --no-install-recommends && rm -rf /var/lib/apt/lists/*
+
+# install database clients
+RUN apt-get update && apt-get install -y mysql-client postgresql-client sqlite3 --no-install-recommends && rm -rf /var/lib/apt/lists/*
+
+# Change to your rails version
+ENV RAILS_VERSION 4.2.3
+
+RUN gem install rails --version $RAILS_VERSION
+
+# Uncomment if you want to use wkhtmltoimage, imagekit
+# RUN apt-get update && apt-get install -y lsb
 
 ENV app /usr/src/app
 RUN mkdir $app
