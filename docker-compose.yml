@@ -27,6 +27,6 @@ web: &default
   links:
     - db
   environment:
-    - DB_USER=postgres
-    - DB_PASSWORD=postgres
+    - DB_USER=DB_1_ENV_POSTGRES_USER
+    - DB_PASSWORD=DB_1_ENV_POSTGRES_PASSWORD
     - DB_HOST=db
