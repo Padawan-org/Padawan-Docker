@@ -1,3 +1,4 @@
+# this is the db container
 db:
   image: postgres
   ports:
@@ -6,11 +7,13 @@ db:
     - POSTGRES_USER=postgres
     - POSTGRES_PASS=postgres
 
+# This is the bundle install container, all gems will be installed here
 box:
   image: busybox
   volumes:
     - /box
 
+# This is the rails container, where your app will be delivered
 web: &default
   build: .
   command: ./script/start.sh
