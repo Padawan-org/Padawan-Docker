@@ -45,6 +45,22 @@ Stop your containers
 
 		$ docker-compose stop
 
+Run a command in a new container
+
+		$ docker-compose run <container name on docker-compose.yml> <command>
+
+List your containers from *docker-compose.yml*
+
+		$ docker-compose ps
+		
+List your all running containers
+
+		$ docker ps
+
+Run a command in a existing container, needs the previous command result
+
+		$ docker exec -i -t <container id or name> <command>
+
 # Inspiration and Thanks
 This project is inspired by [Padawan-Vagrant](https://github.com/brunodles/Padawan-Vagrant).  
 Thanks to [Mr Enderson](https://github.com/endersonmaia) for help me to start this project.
