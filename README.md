@@ -64,3 +64,10 @@ Run a command in a existing container, needs the previous command result
 # Inspiration and Thanks
 This project is inspired by [Padawan-Vagrant](https://github.com/brunodles/Padawan-Vagrant).  
 Thanks to [Mr Enderson](https://github.com/endersonmaia) for help me to start this project.
+
+# Useful Aliases
+I use these aliases on my machine, just put then in your bashrc.
+
+		alias dc='docker-compose'
+		alias dcu='dc up'
+		alias dcl='dc logs'
