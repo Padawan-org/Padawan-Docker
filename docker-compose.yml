@@ -26,7 +26,18 @@ web: &default
     - "3000:3000"
   links:
     - db
+    - mailcatcher
   environment:
     - DB_USER=DB_1_ENV_POSTGRES_USER
     - DB_PASSWORD=DB_1_ENV_POSTGRES_PASSWORD
     - DB_HOST=db
+    - MAILCATCHER_HOST=mailcatcher
+
+# This will pull a separate image for mailcatcher
+mailcatcher:
+  hostname: mailcatcher
+  image: "schickling/mailcatcher"
+  command: mailcatcher -f --ip=0.0.0.0
+  ports:
+    - "1080:1080"
+    - "1025:1025"
