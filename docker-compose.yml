@@ -1,0 +1,7 @@
+web: &default
+  image: node
+  command: "node /usr/src/app/server.js" 
+  volumes:
+    - .:/usr/src/app
+  ports:
+    - "3000:3000"
