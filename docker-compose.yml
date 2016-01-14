@@ -1,7 +1,16 @@
+# This is the bundle install container, all gems will be installed here
+box:
+  image: busybox
+  volumes:
+    - /usr/src/app/node_modules
+
 web: &default
-  image: node
-  command: "node /usr/src/app/server.js" 
+  build: .
+  command: ./start.sh
   volumes:
     - .:/usr/src/app
+  volumes_from:
+    - box
   ports:
     - "3000:3000"
+  working_dir: /usr/src/app/
