@@ -1,5 +1,14 @@
 # Padawan-Docker
-This is a simple project to build a virtual development enviroment using docker.
+This is a simple project to build a virtual development enviroment using docker.  
+Here we will show common commands an the prerequisites for using docker, the others branches will show only expecific content.  
+We've build some envoroment samples, choose one just click on a link bellow.
+
+## Environments
+The master branch is empty, just to point another branch with desired enviroment sample.  
+By now we have those options:
+* [Rails](https://github.com/Padawan-org/Padawan-Docker/tree/rails)
+* [NodeJs](https://github.com/Padawan-org/Padawan-Docker/tree/nodeJs)
+* [ExpressJs](https://github.com/Padawan-org/Padawan-Docker/tree/express)
 
 # Prerequisites
 You will need to download and install these tools.
@@ -11,12 +20,6 @@ If you are on **Mac Os X** or **Windows** you will need to install
 * [VirtualBox VM](https://www.virtualbox.org/wiki/Downloads)
 
 But there's an all in one installers for boot2docker that comes with *VirtualBox*.
-
-# Others?
-This is the master branch, we just add the links here to point to another branches.  
-By now we have those options:
-* [Rails](https://github.com/Padawan-org/Padawan-Docker/tree/rails)
-* [NodeJs](https://github.com/Padawan-org/Padawan-Docker/tree/nodeJs)
 
 # Setup
 It's simple, after instalation you will need to Change these files to match your project
