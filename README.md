@@ -1,10 +1,10 @@
 # Padawan-Docker
-This is a simple project to build a virtual development enviroment using docker.  
-Here we will show common commands an the prerequisites for using docker, the others branches will show only expecific content.  
-We've build some envoroment samples, choose one just click on a link bellow.
+This is a simple project to build a virtual development environment using docker.  
+Here we will show common commands an the prerequisites for using docker, the others branches will show only specific content.  
+We've build some environment samples, choose one just click on a link bellow.
 
 ## Environments
-The master branch is empty, just to point another branch with desired enviroment sample.  
+The master branch is empty, just to point another branch with desired environment sample.  
 By now we have those options:
 * [Rails](https://github.com/Padawan-org/Padawan-Docker/tree/rails)
 * [NodeJs](https://github.com/Padawan-org/Padawan-Docker/tree/nodeJs)
