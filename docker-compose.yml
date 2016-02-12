@@ -1,7 +1,35 @@
 web: &default
   image: node
-  command: "node /usr/src/app/server.js" 
+  command: npm start
   volumes:
-    - .:/usr/src/app
+    - .:/app
+  working_dir: /app
   ports:
-    - "3000:3000"
+    - "1337:1337"
+  links:
+    - mongodb
+  environment:
+    - DATABASE_URI=mongodb://mongodb:27017/dev
+    - APP_ID=myAppId
+    - MASTER_KEY=myMasterKey
+    - PARSE_MOUNT=/1
+    ## Change these keys with your parse developer console keys
+    #- CLOUD_CODE_MAIN=${CLOUD_CODE_HOME}/main.js
+    #- COLLECTION_PREFIX=
+    #- CLIENT_KEY=
+    #- REST_API_KEY=
+    #- DOTNET_KEY=
+    #- JAVASCRIPT_KEY=
+    #- WEBHOOK_KEY=
+    #- FILE_KEY=
+    #- FACEBOOK_APP_IDS "xx,xxx"
+
+mongodb:
+  image: mongo
+  ports:
+    - "27017:27017"
+    - "28017:28017"
+  command: mongod --rest
+  volumes:
+    - .:/app
+    - .database:/data/db
