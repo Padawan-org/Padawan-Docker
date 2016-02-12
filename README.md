@@ -9,6 +9,7 @@ By now we have those options:
 * [Rails](https://github.com/Padawan-org/Padawan-Docker/tree/rails)
 * [NodeJs](https://github.com/Padawan-org/Padawan-Docker/tree/nodeJs)
 * [ExpressJs](https://github.com/Padawan-org/Padawan-Docker/tree/express)
+* [Parse-server](https://github.com/Padawan-org/Padawan-Docker/tree/parse)
 
 # Prerequisites
 You will need to download and install these tools.
@@ -51,7 +52,7 @@ Run a command in a new container
 List your containers from *docker-compose.yml*
 
 		$ docker-compose ps
-		
+
 List your all running containers
 
 		$ docker ps
